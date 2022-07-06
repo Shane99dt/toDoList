@@ -74,8 +74,6 @@ aside article h2{
   height: 40px;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-=======
   margin-top: 30px;
   border-radius: 5px;
 }
@@ -86,7 +84,6 @@ aside article h2{
   flex-wrap: wrap;
   width: 100%;
   height: 30px
->>>>>>> 39efa8b9cd38de621669978a9a6a4578f202e06c
 }
 
 
@@ -118,10 +115,3 @@ i {
   align-items: end;
 }
 
-<<<<<<< HEAD
-form i{
-  cursor: pointer;
-}
-=======
-
->>>>>>> 39efa8b9cd38de621669978a9a6a4578f202e06c
