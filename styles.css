@@ -99,6 +99,12 @@ form {
   display: flex;
   align-items: center;
 }
+
+form i{
+  cursor: pointer;
+}
+
+
 .iconsEnd {
   display: flex;
   justify-content: end;
@@ -111,7 +117,9 @@ i {
 
 .taskButtons {
   display: flex;
+  position: fixed;
   justify-content: end;
   align-items: end;
+  bottom: 80px;
+  right: 80px;
 }
-

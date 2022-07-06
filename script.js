@@ -6,22 +6,23 @@ const sendToDoing = document.getElementById("sendToDoing")
 const deleteTask = document.getElementById("deleteTask")
 const formSection = document.getElementById("sectionForm")
 const form = document.getElementById("newTaskForm")
+const input = document.getElementById("newTaskInput")
 
-const createTask = () => {
-  // formSection.innerHTML += `
-  //   <div class="taskDiv">
-  //   <form id="task" onsubmit="onTaskSubmit(); return false;">
-  //     <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
-  //     <input value="This is a new task bla bla bla">
-  //     <div class="iconsEnd">
-  //       <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-  //       <i class='fa fa-arrow-down' style='color:#740707'></i>
-  //       <i id="deleteClass" class='fa-solid fa-trash-can'></i>
-  //     </div>
-  //   </form>
-  // </div>
-  // `
-}
+// const createTask = () => {
+//   formSection.innerHTML += `
+//     <div class="taskDiv">
+//     <form id="task" onsubmit="onTaskSubmit(); return false;">
+//       <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+//       <input value="">
+//       <div class="iconsEnd">
+//         <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
+//         <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
+//         <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+//       </div>
+//     </form>
+//   </div>
+//   `
+// }
 
 // document.querySelector('#addTask').addEventListener('click', () => {
 //   createTask()
@@ -37,5 +38,10 @@ form.addEventListener("submit", (e) => {
 
   const task = input.value;
 
-  if(i)
+  if(!task){
+    alert("Please add a task")
+    return
+  }
+
+
 })
