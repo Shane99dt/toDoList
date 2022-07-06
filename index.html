@@ -27,20 +27,22 @@
       </aside>
       <section class="sec-form">
         <h2 id="pageTitle">To Do List</h2>
-        <div class="taskDiv">
-        <form id="task" onsubmit="onTaskSubmit(); return false;">
-          <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
-            <input value="This is a new task bla bla bla">
-          <div class="iconsEnd">
-            <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-            <i class='fa fa-arrow-down' style='color:#740707'></i>
-            <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+        <div id="sectionForm">
+          <div class="taskDiv">
+            <form id="newTaskForm" onsubmit="onTaskSubmit(); return false;">
+              <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+              <input id="newTaskInput" value="This is a new task bla bla bla">
+              <div class="iconsEnd">
+                <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
+                <i class='fa fa-arrow-down' style='color:#740707'></i>
+                <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+              </div>
+            </form>
           </div>
-          </div>
-        </form>
+        </div>
         <div>
-        <button id="randomTask"></button>
-        <button id="addTask"></button>
+          <button id="randomTask"></button>
+          <button id="addTask"></button>
         </div>
       </section>
     </main>

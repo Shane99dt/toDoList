@@ -64,7 +64,6 @@ aside article h2{
   height: 40px;
   display: flex;
   align-items: center;
-  
 }
 
 
@@ -92,4 +91,8 @@ i {
 
 .downButtons {
   
+}
+
+form i{
+  cursor: pointer;
 }
