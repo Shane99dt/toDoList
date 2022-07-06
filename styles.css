@@ -3,13 +3,10 @@ main{
   flex-direction: row;
 }
 
-<<<<<<< HEAD
-=======
 body {
   background-color: #D5D7C9;
 }
 
->>>>>>> f89bc243182b2d6e8787a56d8a7737289c2d7dcb
 aside{
   display: flex;
   flex-direction: column;
@@ -91,4 +88,8 @@ form {
 
 i {
   padding: 9px;
+}
+
+.downButtons {
+  
 }
