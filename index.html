@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <title>To Do's</title>
   </head>
   <body>
@@ -27,19 +26,17 @@
       </aside>
       <section class="sec-form">
         <h2 id="pageTitle">To Do List</h2>
-        <div class="taskDiv">
         <form id="task" onsubmit="onTaskSubmit(); return false;">
+          <div>
             <button id="validateTask"></button>
-            <input value="This is a new task bla bla bla">
-            <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-            <i class='fa fa-arrow-down' style='color:#740707'></i>
-            <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+            <input />
+            <button id="priority"></button>
+            <button id="sendTask"></button>
+            <button id="deleteTask"></button>
           </div>
         </form>
-        <div>
         <button id="randomTask"></button>
         <button id="addTask"></button>
-        </div>
       </section>
     </main>
 
