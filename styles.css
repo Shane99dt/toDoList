@@ -3,6 +3,26 @@ main{
   flex-direction: row;
 }
 
+body {
+  background-color: #D5D7C9;
+}
+
+
+input {
+  border: none;
+}
+
+
+.taskDiv {
+  background-color: white;
+  width: 500px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  
+}
+
 aside{
   display: flex;
   flex-direction: column;
