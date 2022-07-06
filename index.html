@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do's</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do's</title>
+  </head>
+
+  <body>
+    <header>
+      <h2>To Do List</h2>
+    </header>
+    <main>
+      <aside>
+        <article>
+          <h2>Todo</h2>
+        </article>
+        <article>
+          <h2>Doing</h2>
+        </article>
+        <article>
+          <h2>Done</h2>
+        </article>
+        <article>
+          <h2>All</h2>
+        </article>
+      </aside>
+      <form id="task" onsubmit="onTaskSubmit(); return false;">
+        <div>
+          <button id="validateTask"></button>
+          <input />
+          <button id="priority"></button>
+          <button id="sendTask"></button>
+          <button id="deleteTask"></button>
+        </div>
+      </form>
+      <button id="addTask"></button>
+      <button id="randomTask"></button>
+    </main>
+  </body>
 </html>
