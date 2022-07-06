@@ -4,39 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
     <title>To Do's</title>
   </head>
-
   <body>
-    <header>
-      <h2>To Do List</h2>
-    </header>
     <main>
       <aside>
         <article>
-          <h2>Todo</h2>
+          <h2 id="todoLabel">Todo</h2>
         </article>
         <article>
-          <h2>Doing</h2>
+          <h2 id="doingLabel">Doing</h2>
         </article>
         <article>
-          <h2>Done</h2>
+          <h2 id="doneLabel">Done</h2>
         </article>
         <article>
-          <h2>All</h2>
+          <h2 id="allLabel">All</h2>
         </article>
       </aside>
-      <form id="task" onsubmit="onTaskSubmit(); return false;">
-        <div>
-          <button id="validateTask"></button>
-          <input />
-          <button id="priority"></button>
-          <button id="sendTask"></button>
-          <button id="deleteTask"></button>
-        </div>
-      </form>
-      <button id="addTask"></button>
-      <button id="randomTask"></button>
+      <section class="sec-form">
+        <h2 id="pageTitle">To Do List</h2>
+        <form id="task" onsubmit="onTaskSubmit(); return false;">
+          <div>
+            <button id="validateTask"></button>
+            <input />
+            <button id="priority"></button>
+            <button id="sendTask"></button>
+            <button id="deleteTask"></button>
+          </div>
+        </form>
+        <button id="randomTask"></button>
+        <button id="addTask"></button>
+      </section>
     </main>
+
+
+
+
+
+    <script src="./script.js"></script>
   </body>
 </html>
