@@ -10,6 +10,9 @@
     <title>To Do's</title>
   </head>
   <body>
+    <!-- <header> -->
+
+    <!-- </header> -->
     <main>
       <aside>
         <article>
@@ -25,24 +28,42 @@
           <h2 id="allLabel">All</h2>
         </article>
       </aside>
+      <h2 id="pageTitle">To Do List</h2>
+
       <section class="sec-form">
-        <h2 id="pageTitle">To Do List</h2>
         <div class="taskDiv">
         <form id="task" onsubmit="onTaskSubmit(); return false;">
           <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
             <input value="This is a new task bla bla bla">
           <div class="iconsEnd">
             <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-            <i class='fa fa-arrow-down' style='color:#740707'></i>
+            <i id="sendTask" class='fa fa-arrow-down' style='color:#740707'></i>
             <i id="deleteClass" class='fa-solid fa-trash-can'></i>
           </div>
           </div>
         </form>
+        
         <div>
-        <button id="randomTask"></button>
-        <button id="addTask"></button>
         </div>
-      </section>
+        <div class="taskDiv">
+          <form id="task" onsubmit="onTaskSubmit(); return false;">
+            <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+              <input value="This is a new task bla bla bla">
+            <div class="iconsEnd">
+              <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
+              <i id="sendTask" class='fa fa-arrow-down' style='color:#740707'></i>
+              <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+            </div>
+            </div>
+          </form>
+          
+          <div>
+          </div>
+        </section>
+        <div class="taskButtons">
+        <i id="randomTask" class='fa fa-arrows-alt'></i>
+        <i id="addTast" class='fa-solid fa-circle-plus'></i>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>
