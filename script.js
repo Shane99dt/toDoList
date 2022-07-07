@@ -157,7 +157,7 @@ form.addEventListener("submit", (e) => {
   const showTodo = () => {
     const list = document.getElementsByClassName("todoTask")
     for(let i = 0; i < list.length; i++){
-      list[i].style.display = 'initial'
+      list[i].style.display = 'flex'
       console.log(list[i])
     }
   }
@@ -173,7 +173,7 @@ form.addEventListener("submit", (e) => {
   const showCurrentTasks = () => {
     const list = document.getElementsByClassName("doingTask")
     for(let i = 0; i < list.length; i++){
-      list[i].style.display = 'initial'
+      list[i].style.display = 'flex'
       console.log(list[i])
     }
   }
@@ -189,7 +189,7 @@ form.addEventListener("submit", (e) => {
   const showFinishedTasks = () => {
     const list = document.getElementsByClassName("doneTask")
     for(let i = 0; i < list.length; i++){
-      list[i].style.display = 'initial'
+      list[i].style.display = 'flex'
       console.log(list[i])
     }
   }
@@ -205,7 +205,7 @@ form.addEventListener("submit", (e) => {
   const showAllTasks = () => {
     const list = document.getElementsByClassName("taskDiv")
     for(let i = 0; i < list.length; i++){
-      list[i].style.display = 'initial'
+      list[i].style.display = 'flex'
       console.log(list[i])
     }
   }
