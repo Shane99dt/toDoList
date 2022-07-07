@@ -32,16 +32,16 @@
 
       <section class="sec-form">
         <article class="taskCreator">
-          <div class="taskDiv">
+          <div class="taskAddDiv">
             <form id="newTaskForm" onsubmit="onTaskSubmit(); return false;">
               <input id="newTaskInput" value="This is a new task bla bla bla" />
-              <button>
-                <i id="randomTask" class="fa fa-arrows-alt"></i>
-              </button>
-              <button>
+              <button type="submit" name="taskSubmit">
                 <i id="addTask" class="fa-solid fa-circle-plus"></i>
               </button>
             </form>
+            <button name="randomTask">
+              <i id="randomTask" class="fa fa-arrows-alt"></i>
+            </button>
           </div>
         </article>
         <article class="tasks-list">
