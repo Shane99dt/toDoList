@@ -109,6 +109,7 @@ form.addEventListener("submit", (e) => {
   buttonValidate.addEventListener('click', () => {
     taskElement.classList.add('doneTask')
     taskElement.classList.remove('todoTask')
+    taskElement.classList.remove('doingTask')
     taskElement.style.display = 'none'
   })
 
@@ -116,6 +117,7 @@ form.addEventListener("submit", (e) => {
 
   buttonDoingTask.addEventListener('click', () => {
     taskElement.classList.add('doingTask')
+    taskElement.classList.remove('doneTask')
     taskElement.classList.remove('todoTask')
     taskElement.style.display = 'none'
   })
