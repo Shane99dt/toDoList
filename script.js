@@ -23,10 +23,10 @@ form.addEventListener("submit", (e) => {
 
   const task = input.value;
 
-  if(!task){
-    alert("Please add a task")
-    return
-  }
+  // if(!task){
+  //   alert("Please add a task")
+  //   return
+  // }
 
 //  // tasks.innerHTML += `
 //  // <div class="taskDiv" id="taskEl">
@@ -42,6 +42,11 @@ form.addEventListener("submit", (e) => {
 //  //   </div>
 //  // </div>
 //  // `
+
+
+
+
+
   const taskElement = document.createElement('div')
   taskElement.classList.add('taskDiv', 'todoTask')
 
@@ -213,3 +218,35 @@ form.addEventListener("submit", (e) => {
   })
 
   // show all tasks end
+
+
+  // Random 
+  function addRandomTask(){
+    randomNumber()
+    makeRandomTask()
+    
+  }
+
+  let randomValue = ["Random task number one", "Random task number two", "Random task Number 3"]
+
+  function randomNumber() {
+    randomInteger = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+  function makeRandomTask(){
+    let generatedTask= new task(randomValue[randomNumber]);
+        tasks.innerHTML += `   
+        <div class="taskDiv" id="taskEl">
+        <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+        <div class="taskContent">
+          <input type = "text" value = "${generatedTask.value}" readonly>
+        </div>
+        <div class="iconsEnd">
+          <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
+          <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
+          <i id="deleteTask" class='fa-solid fa-trash-can'></i>
+          <button id="editBtn">edittt</button>
+        </div>
+      </div>
+      `
+  }
