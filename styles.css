@@ -1,4 +1,4 @@
-main{
+main {
   display: flex;
   flex-direction: column;
 }
@@ -7,7 +7,7 @@ body {
   background-color: #D5D7C9;
 }
 
-aside{
+aside {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -19,7 +19,7 @@ aside{
 }
 
 
-aside article button{
+aside article button {
   font-family: sans-serif;
   width: 140px;
   height: 40px;
@@ -29,16 +29,19 @@ aside article button{
   font-size: 16px;
 }
 
-#todoLabel{
+#todoLabel {
   background-color: #D9D9D9;
 }
-#doingLabel{
+
+#doingLabel {
   background-color: #D74747;
 }
-#doneLabel{
+
+#doneLabel {
   background-color: #60CA1F;
 }
-#allLabel{
+
+#allLabel {
   background-color: #AC9EFF;
 }
 
@@ -46,16 +49,16 @@ aside article button{
 
 /* section form */
 
-.sec-form{
+.sec-form {
   display: flex;
   flex-direction: column;
   margin-left: 250px;
   margin-top: 70px;
-  width: 40%;
+  /* width: 40%; */
 
 }
 
-#pageTitle{
+#pageTitle {
   font-family: cursive;
   position: relative;
   font-weight: 400;
@@ -68,6 +71,20 @@ aside article button{
   margin-top: 25px;
 }
 
+
+.taskCreator {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-left: 30px;
+}
+
+.taskCreator button {
+  background-color: transparent;
+  border: none;
+
+}
+
 /* task div start */
 
 .taskDiv {
@@ -78,6 +95,12 @@ aside article button{
   align-items: center;
   margin-top: 30px;
   border-radius: 5px;
+}
+
+.tasks-list h2 {
+  font-size: 35px;
+  font-family: cursive;
+  margin-top: 20px;
 }
 
 /* task div end */
@@ -96,6 +119,16 @@ input {
   width: 80%;
 }
 
+#newTaskForm {
+  background-color: rgba(99, 92, 92, 0.2);
+}
+
+#newTaskForm input {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
 /* add padding left when remove the valid button */
 form {
   width: 100%;
@@ -110,7 +143,7 @@ form {
 
 /* end icons style*/
 
-.iconsEnd button{
+.iconsEnd button {
   border: none;
   background-color: transparent;
   cursor: pointer;
