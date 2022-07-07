@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>To Do's</title>
-  </head>
-  <body>
-    <!-- <header> -->
 
-    <!-- </header> -->
-    <main>
-      <aside>
-        <article>
-          <button id="todoLabel">Todo</button>
-        </article>
-        <article>
-          <button id="doingLabel">Doing</button>
-        </article>
-        <article>
-          <button id="doneLabel">Done</button>
-        </article>
-        <article>
-          <button id="allLabel">All</button>
-        </article>
-      </aside>
-      <h2 id="pageTitle">To Do List</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>To Do's</title>
+</head>
 
-      <section class="sec-form">
-        <article>
-          <div class="taskDiv">
-            <form id="newTaskForm" onsubmit="onTaskSubmit(); return false;">
-              <input id="newTaskInput" value="This is a new task bla bla bla" />
-            </form>
-          </div>
-        </article>
-        <article class="tasks-list">
-          <h2>Tasks</h2>
-          <div id="tasks" class="">
-            <!--
+<body>
+  <!-- <header> -->
+
+  <!-- </header> -->
+  <main>
+    <aside>
+      <article>
+        <button id="todoLabel">Todo</button>
+      </article>
+      <article>
+        <button id="doingLabel">Doing</button>
+      </article>
+      <article>
+        <button id="doneLabel">Done</button>
+      </article>
+      <article>
+        <button id="allLabel">All</button>
+      </article>
+    </aside>
+    <h2 id="pageTitle">To Do List</h2>
+
+    <section class="sec-form">
+      <article class="taskCreator">
+        <div class="taskDiv">
+          <form id="newTaskForm" onsubmit="onTaskSubmit(); return false;">
+            <input id="newTaskInput" value="This is a new task bla bla bla" />
+          </form>
+          <button>
+            <i id="randomTask" class="fa fa-arrows-alt"></i>
+          </button>
+          <button>
+            <i id="addTask" class="fa-solid fa-circle-plus"></i>
+          </button>
+        </div>
+      </article>
+      <article class="tasks-list">
+        <h2>Tasks</h2>
+        <div id="tasks" class="">
+          <!--
             <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
             <div class="taskContent">
 
@@ -58,14 +62,15 @@
               <i id="deleteClass" class='fa-solid fa-trash-can'></i>
             </div>
             -->
-          </div>
-          <div class="taskButtons">
-            <i id="randomTask" class="fa fa-arrows-alt"></i>
-            <i id="addTask" class="fa-solid fa-circle-plus"></i>
-          </div>
-        </article>
-      </section>
-    </main>
-    <script src="./script.js"></script>
-  </body>
+        </div>
+        <div class="taskButtons">
+          <i id="randomTask" class="fa fa-arrows-alt"></i>
+          <i id="addTask" class="fa-solid fa-circle-plus"></i>
+        </div>
+      </article>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>
