@@ -19,7 +19,7 @@ aside{
 }
 
 
-aside article h2{
+aside article button{
   font-family: sans-serif;
   width: 140px;
   height: 40px;
@@ -68,6 +68,8 @@ aside article h2{
   margin-top: 25px;
 }
 
+/* task div start */
+
 .taskDiv {
   background-color: white;
   width: 580px;
@@ -78,6 +80,7 @@ aside article h2{
   border-radius: 5px;
 }
 
+/* task div end */
 
 .headerLogo {
   display: flex;
@@ -93,17 +96,27 @@ input {
   width: 80%;
 }
 
+/* add padding left when remove the valid button */
 form {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+  padding-left: 52px;
 }
 
-form i{
+/* form end */
+
+
+/* end icons style*/
+
+.iconsEnd button{
+  border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
+/* end icons end */
 
 .iconsEnd {
   display: flex;

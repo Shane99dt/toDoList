@@ -7,26 +7,29 @@ const deleteTask = document.getElementById("deleteTask")
 const formSection = document.getElementById("sectionForm")
 const form = document.getElementById("newTaskForm")
 const input = document.getElementById("newTaskInput")
+const tasks = document.getElementById("tasks")
 
-// const createTask = () => {
-//   formSection.innerHTML += `
-//     <div class="taskDiv">
-//     <form id="task" onsubmit="onTaskSubmit(); return false;">
-//       <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
-//       <input value="">
-//       <div class="iconsEnd">
-//         <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-//         <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
-//         <i id="deleteClass" class='fa-solid fa-trash-can'></i>
-//       </div>
-//     </form>
-//   </div>
-//   `
-// }
+const createTask = () => {
+  tasks.innerHTML += `
+    <div id="tasks" class="taskDiv">
 
-// document.querySelector('#addTask').addEventListener('click', () => {
-//   createTask()
-// });
+      <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+      <div class="taskContent">
+          sosmdfjh
+      </div>
+      <div class="iconsEnd">
+        <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
+        <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
+        <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+      </div>
+
+    </div>
+    `
+}
+
+document.querySelector('#addTask').addEventListener('click', () => {
+  createTask()
+});
 
 // const deleteTaskFunction = () => {
 
