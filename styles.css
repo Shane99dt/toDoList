@@ -85,6 +85,17 @@ aside article button {
 
 }
 
+.taskAddDiv {
+  background-color: rgba(255, 255, 255, 0.815);
+  opacity: 80%;
+  width: 580px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
 /* task div start */
 
 .taskDiv {
@@ -98,6 +109,14 @@ aside article button {
   border-radius: 5px;
 }
 
+.taskDiv button{
+  border: none;
+  background-color: transparent;
+}
+
+.taskContent{
+  padding-left: 10px;
+}
 
 .taskContent {
   width: 100%;

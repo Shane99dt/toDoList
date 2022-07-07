@@ -7,8 +7,17 @@ const formSection = document.getElementById("sectionForm")
 const form = document.getElementById("newTaskForm")
 const input = document.getElementById("newTaskInput")
 const tasksList = document.getElementById("tasks")
+const toDoLabel = document.getElementById("todoLabel")
+const doingLabel = document.getElementById("doingLabel")
+const doneLabel = document.getElementById("doneLabel")
+const allLabel = document.getElementById("allLabel")
 
 // prevents refreshing the page while adding a task
+
+const onTaskSubmit = () => {
+  console.log("submit")
+}
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -34,7 +43,7 @@ form.addEventListener("submit", (e) => {
 //  // </div>
 //  // `
   const taskElement = document.createElement('div')
-  taskElement.classList.add('taskDiv')
+  taskElement.classList.add('taskDiv', 'todoTask')
 
   const buttonValidate = document.createElement('button')
   const validateImg = document.createElement('i')
@@ -95,8 +104,112 @@ form.addEventListener("submit", (e) => {
     tasksList.removeChild(taskElement)
   })
 
+  // validate task
+
+  buttonValidate.addEventListener('click', () => {
+    taskElement.classList.add('doneTask')
+    taskElement.classList.remove('todoTask')
+    taskElement.style.display = 'none'
+  })
+
+  // doing task
+
+  buttonDoingTask.addEventListener('click', () => {
+    taskElement.classList.add('doingTask')
+    taskElement.classList.remove('todoTask')
+    taskElement.style.display = 'none'
+  })
+
 })
 
+  // const todoDivs = document.getElementsByClassName("taskDiv")
+
+  // const showTodoTasks = () => {
+  //   // todoDivs.classList.add('qsdjkh')
+  //   console.log('somethibg')
+  //   console.log(todoDivs)
+  // }
+
+  // toDoLabel.addEventListener('click', showTodoTasks())
+
+  // toDoLabel.addEventListener('click', () => {
+  //   console.log(document.getElementsByClassName("todoTask"))
+  //   console.log("lksd")
+  // })
+
+  // doingLabel.addEventListener('click', () => {
+  //   console.log(document.getElementsByClassName("doingTask"))
+  //   console.log("lksdsqd q")
+  // })
+
+  // doneLabel.addEventListener('click', () => {
+  //   console.log(document.getElementsByClassName("doneTask"))
+  //   console.log("done task")
+  // })
 
 
 
+
+  // show toDo tasks
+
+  const showTodo = () => {
+    const list = document.getElementsByClassName("todoTask")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'initial'
+      console.log(list[i])
+    }
+  }
+
+  toDoLabel.addEventListener('click', () => {
+    showTodo()
+  })
+
+  // show toDo tasks end
+
+  // show current tasks
+
+  const showCurrentTasks = () => {
+    const list = document.getElementsByClassName("doingTask")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'initial'
+      console.log(list[i])
+    }
+  }
+
+  doingLabel.addEventListener('click', () => {
+    showCurrentTasks()
+  })
+
+  // show current tasks end
+
+  // show finished tasks
+
+  const showFinishedTasks = () => {
+    const list = document.getElementsByClassName("doneTask")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'initial'
+      console.log(list[i])
+    }
+  }
+
+  doneLabel.addEventListener('click', () => {
+    showFinishedTasks()
+  })
+
+  // show finished tasks end
+
+  // show all tasks
+
+  const showAllTasks = () => {
+    const list = document.getElementsByClassName("taskDiv")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'initial'
+      console.log(list[i])
+    }
+  }
+
+  allLabel.addEventListener('click', () => {
+    showAllTasks()
+  })
+
+  // show all tasks end
