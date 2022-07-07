@@ -88,13 +88,19 @@ aside article button {
 /* task div start */
 
 .taskDiv {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.815);
+  opacity: 80%;
   width: 580px;
   height: 40px;
   display: flex;
   align-items: center;
   margin-top: 30px;
   border-radius: 5px;
+}
+
+
+.taskContent {
+  width: 100%;
 }
 
 .tasks-list h2 {
@@ -115,12 +121,23 @@ aside article button {
 
 input {
   border: none;
+  outline: none;
+  margin-top: 2px;
+  border-bottom: 1px solid #e4e4ec;
+  background: transparent;
   padding-left: 12px;
   width: 80%;
 }
+input, select, textarea{
+  color: #a69696;
+}
+
+textarea:focus, input:focus {
+  color: #7e7373;
+}
 
 #newTaskForm {
-  background-color: rgba(99, 92, 92, 0.2);
+  background-color: #f5f5f5;
 }
 
 #newTaskForm input {
