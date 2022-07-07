@@ -37,32 +37,34 @@
       <h2 id="pageTitle">To Do List</h2>
 
       <section class="sec-form">
-        <div class="taskDiv">
-          <form id="newTaskForm" onsubmit="onTaskSubmit(); return false;">
-            <input id="newTaskInput" value="This is a new task bla bla bla" />
-          </form>
-        </div>
-      </section>
-      <section class="tasks-list">
-        <!-- <h2>Tasks</h2> -->
-        <div id="tasks" class="">
-          <!--
-          <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
-          <div class="taskContent">
+        <article>
+          <div class="taskDiv">
+            <form id="newTaskForm" onsubmit="onTaskSubmit(); return false;">
+              <input id="newTaskInput" value="This is a new task bla bla bla" />
+            </form>
+          </div>
+        </article>
+        <article class="tasks-list">
+          <h2>Tasks</h2>
+          <div id="tasks" class="">
+            <!--
+            <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+            <div class="taskContent">
 
+            </div>
+            <div class="iconsEnd">
+              <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
+              <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
+              <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+            </div>
+            -->
           </div>
-          <div class="iconsEnd">
-            <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-            <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
-            <i id="deleteClass" class='fa-solid fa-trash-can'></i>
+          <div class="taskButtons">
+            <i id="randomTask" class="fa fa-arrows-alt"></i>
+            <i id="addTask" class="fa-solid fa-circle-plus"></i>
           </div>
-          -->
-        </div>
+        </article>
       </section>
-      <div class="taskButtons">
-        <i id="randomTask" class="fa fa-arrows-alt"></i>
-        <i id="addTask" class="fa-solid fa-circle-plus"></i>
-      </div>
     </main>
     <script src="./script.js"></script>
   </body>
