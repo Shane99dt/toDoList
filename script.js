@@ -40,6 +40,7 @@ form.addEventListener("submit", (e) => {
 
   const taskElement = document.createElement('div')
   taskElement.classList.add('taskDiv', 'todoTask')
+  tasksList.appendChild(taskElement)
 
   const buttonValidate = document.createElement('button')
   const validateImg = document.createElement('i')
@@ -55,9 +56,11 @@ form.addEventListener("submit", (e) => {
 
   taskElement.appendChild(taskContentElement)
 
-  const contentPara = document.createElement('p')
+  const contentPara = document.createElement('input')
   contentPara.classList.add('content')
-  contentPara.innerHTML = task
+  contentPara.type = 'text'
+  contentPara.value = task
+  contentPara.setAttribute('readonly', 'readonly');
 
   taskContentElement.appendChild(contentPara)
 
@@ -118,24 +121,25 @@ form.addEventListener("submit", (e) => {
 
   buttonDoingTask.appendChild(doingTaskImg)
   doingTaskImg.classList.add('fa', 'fa-arrow-down')
-  doingTaskImg.setAttribute('id', 'priority')
+  doingTaskImg.setAttribute('id', 'sendToDoing')
 
   const buttonEditTask = document.createElement('button')
-  buttonEditTask.innerHTML = 'Edit'
+  buttonEditTask.innerText = "Edit"
+
 
   const buttonDelete = document.createElement('button')
   const deleteTaskImg = document.createElement('i')
 
-  buttonDelete.appendChild(deleteTaskImg)
+  buttonDelete.appendChild(deleteTaskImg);
   deleteTaskImg.classList.add('fa-solid', 'fa-trash-can')
   deleteTaskImg.setAttribute('id', 'deleteTaskImg')
 
-  taskElement.appendChild(buttonDoingTask)
-  taskElement.appendChild(buttonEditTask)
-  taskElement.appendChild(buttonDelete)
-  tasksList.appendChild(taskElement)
+  taskElement.appendChild(buttonDoingTask);
+  taskElement.appendChild(buttonEditTask);
+  taskElement.appendChild(buttonDelete);
 
-  // rest the value of the task
+
+  // reset the value of the task
   input.value =''
 
   //priority button toggle
@@ -163,11 +167,15 @@ form.addEventListener("submit", (e) => {
 
   // Edit task
 
-  buttonEditTask.addEventListener('click', () => {
-    if(buttonEditTask.innerHTML.toLowerCase() == 'edit'){
-      
+  buttonEditTask.addEventListener('click', (e) => {
+    if(buttonEditTask.innerText.toLowerCase() == 'edit'){
+      buttonEditTask.innerText = "Save"
+			contentPara.removeAttribute("readonly")
+			buttonEditTask.focus()
+
     }else{
-      
+      buttonEditTask.innerText = "Edit"
+			contentPara.setAttribute("readonly", "readonly")
     }
   })
 
