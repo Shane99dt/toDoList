@@ -179,6 +179,29 @@ form {
 
 /* end icons style*/
 
+/* priority button */
+
+.priority-dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f5f5f5;
+  z-index: 1;
+}
+
+.priority-dropdown-content a{
+  color: black;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+}
+
+.priorityDropdownShow{
+  display: block;
+}
+
+/* priority button end */
+
+
 .taskDiv button {
   border: none;
   background-color: transparent;

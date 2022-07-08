@@ -11,6 +11,7 @@ const toDoLabel = document.getElementById("todoLabel")
 const doingLabel = document.getElementById("doingLabel")
 const doneLabel = document.getElementById("doneLabel")
 const allLabel = document.getElementById("allLabel")
+let tasksTable = []
 
 // prevents refreshing the page while adding a task
 
@@ -28,6 +29,12 @@ form.addEventListener("submit", (e) => {
     alert("Please add a task")
     return
   }
+
+  let taskObjet = {
+    name: task,
+    status: "To do",
+  }
+  tasksTable.push(taskObjet)
 
   const taskElement = document.createElement('div')
   taskElement.classList.add('taskDiv', 'todoTask')
@@ -56,12 +63,53 @@ form.addEventListener("submit", (e) => {
   taskEndBtns.classList.add('iconsEnd')
 
   // task end buttons
+
+  // priority button add
+  const priorityDiv = document.createElement('div')
+  priorityDiv.classList.add('dropdown')
+
+  taskElement.appendChild(priorityDiv)
+
   const buttonPriority = document.createElement('button')
+  buttonPriority.classList.add('dropBtn')
   const priorityImg = document.createElement('i')
+
+  priorityDiv.appendChild(buttonPriority)
+
+  const priorityDropdownContent = document.createElement('div')
+  priorityDropdownContent.classList.add('priority-dropdown-content')
+  priorityDropdownContent.setAttribute('id', 'priorityDropdown')
+
+  priorityDiv.appendChild(priorityDropdownContent)
+
+  const priority1 = document.createElement('a')
+  priority1.innerHTML = '1'
+  const priority2 = document.createElement('a')
+  priority2.innerHTML = '2'
+  const priority3 = document.createElement('a')
+  priority3.innerHTML = '3'
+  const priority4 = document.createElement('a')
+  priority4.innerHTML = '4'
+  const priority5 = document.createElement('a')
+  priority5.innerHTML = '5'
+
+  priority1.setAttribute('id', 'firstPriority')
+  priority2.setAttribute('id', 'secondPriority')
+  priority3.setAttribute('id', 'thirdPriority')
+  priority4.setAttribute('id', 'fourthPriority')
+  priority5.setAttribute('id', 'fifthPriority')
+
+  priorityDropdownContent.appendChild(priority1)
+  priorityDropdownContent.appendChild(priority2)
+  priorityDropdownContent.appendChild(priority3)
+  priorityDropdownContent.appendChild(priority4)
+  priorityDropdownContent.appendChild(priority5)
 
   buttonPriority.appendChild(priorityImg)
   priorityImg.classList.add('fa', 'fa-star')
   priorityImg.setAttribute('id', 'priority')
+
+  // priority content end
 
   const buttonDoingTask = document.createElement('button')
   const doingTaskImg = document.createElement('i')
@@ -77,14 +125,18 @@ form.addEventListener("submit", (e) => {
   deleteTaskImg.classList.add('fa-solid', 'fa-trash-can')
   deleteTaskImg.setAttribute('id', 'deleteTaskImg')
 
-
-  taskElement.appendChild(buttonPriority)
   taskElement.appendChild(buttonDoingTask)
   taskElement.appendChild(buttonDelete)
   tasksList.appendChild(taskElement)
 
   // rest the value of the task
   input.value =''
+
+  //priority button toggle
+  buttonPriority.addEventListener('click', () => {
+    priorityDropdownContent.classList.toggle('priorityDropdownShow')
+  })
+
 
   // delete a task
   buttonDelete.addEventListener('click', () => {
