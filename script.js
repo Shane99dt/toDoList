@@ -34,6 +34,7 @@ form.addEventListener("submit", (e) => {
     name: task,
     status: "to do",
   }
+
   tasksTable.push(taskObjet)
   console.log(taskObjet)
   console.log(tasksTable)
@@ -70,49 +71,71 @@ form.addEventListener("submit", (e) => {
   // task end buttons
 
   // priority button add
-  const priorityDiv = document.createElement('div')
-  priorityDiv.classList.add('dropdown')
 
-  taskElement.appendChild(priorityDiv)
+  // priority button add first way with select element
 
-  const buttonPriority = document.createElement('button')
-  buttonPriority.classList.add('dropBtn')
-  const priorityImg = document.createElement('i')
+  const buttonPriority = document.createElement('div')
+  buttonPriority.classList.add('dropdown')
+  taskElement.appendChild(buttonPriority)
 
-  priorityDiv.appendChild(buttonPriority)
+  const selectList = document.createElement('select')
+  buttonPriority.appendChild(selectList)
 
-  const priorityDropdownContent = document.createElement('div')
-  priorityDropdownContent.classList.add('priority-dropdown-content')
-  priorityDropdownContent.setAttribute('id', 'priorityDropdown')
+  let arrayPriority = [0, 1, 2, 3, 4, 5]
 
-  priorityDiv.appendChild(priorityDropdownContent)
+  for (let i = 0; i < arrayPriority.length; i++) {
+    let option = document.createElement("option");
+    option.value = arrayPriority[i];
+    option.text = arrayPriority[i];
+    selectList.appendChild(option);
+  }
 
-  const priority1 = document.createElement('a')
-  priority1.innerHTML = '1'
-  const priority2 = document.createElement('a')
-  priority2.innerHTML = '2'
-  const priority3 = document.createElement('a')
-  priority3.innerHTML = '3'
-  const priority4 = document.createElement('a')
-  priority4.innerHTML = '4'
-  const priority5 = document.createElement('a')
-  priority5.innerHTML = '5'
+  ////////////////////////////////////////
 
-  priority1.setAttribute('id', 'firstPriority')
-  priority2.setAttribute('id', 'secondPriority')
-  priority3.setAttribute('id', 'thirdPriority')
-  priority4.setAttribute('id', 'fourthPriority')
-  priority5.setAttribute('id', 'fifthPriority')
+  // priority button add first way with js with display element
 
-  priorityDropdownContent.appendChild(priority1)
-  priorityDropdownContent.appendChild(priority2)
-  priorityDropdownContent.appendChild(priority3)
-  priorityDropdownContent.appendChild(priority4)
-  priorityDropdownContent.appendChild(priority5)
+  // const priorityDiv = document.createElement('div')
+  // priorityDiv.classList.add('dropdown')
+  // taskElement.appendChild(priorityDiv)
 
-  buttonPriority.appendChild(priorityImg)
-  priorityImg.classList.add('fa', 'fa-star')
-  priorityImg.setAttribute('id', 'priority')
+  // const buttonPriority = document.createElement('button')
+  // buttonPriority.classList.add('dropBtn')
+  // const priorityImg = document.createElement('i')
+
+  // priorityDiv.appendChild(buttonPriority)
+
+  // const priorityDropdownContent = document.createElement('div')
+  // priorityDropdownContent.classList.add('priority-dropdown-content')
+  // priorityDropdownContent.setAttribute('id', 'priorityDropdown')
+
+  // priorityDiv.appendChild(priorityDropdownContent)
+
+  // const priority1 = document.createElement('a')
+  // priority1.innerHTML = '1'
+  // const priority2 = document.createElement('a')
+  // priority2.innerHTML = '2'
+  // const priority3 = document.createElement('a')
+  // priority3.innerHTML = '3'
+  // const priority4 = document.createElement('a')
+  // priority4.innerHTML = '4'
+  // const priority5 = document.createElement('a')
+  // priority5.innerHTML = '5'
+
+  // priority1.setAttribute('id', 'firstPriority')
+  // priority2.setAttribute('id', 'secondPriority')
+  // priority3.setAttribute('id', 'thirdPriority')
+  // priority4.setAttribute('id', 'fourthPriority')
+  // priority5.setAttribute('id', 'fifthPriority')
+
+  // priorityDropdownContent.appendChild(priority1)
+  // priorityDropdownContent.appendChild(priority2)
+  // priorityDropdownContent.appendChild(priority3)
+  // priorityDropdownContent.appendChild(priority4)
+  // priorityDropdownContent.appendChild(priority5)
+
+  // buttonPriority.appendChild(priorityImg)
+  // priorityImg.classList.add('fa', 'fa-star')
+  // priorityImg.setAttribute('id', 'priority')
 
   // priority content end
 
@@ -143,9 +166,9 @@ form.addEventListener("submit", (e) => {
   input.value =''
 
   //priority button toggle
-  buttonPriority.addEventListener('click', () => {
-    priorityDropdownContent.classList.toggle('priorityDropdownShow')
-  })
+  // buttonPriority.addEventListener('click', () => {
+  //   priorityDropdownContent.classList.toggle('priorityDropdownShow')
+  // })
 
   // validate task
 
@@ -153,15 +176,22 @@ form.addEventListener("submit", (e) => {
     taskElement.classList.add('doneTask')
     taskElement.classList.remove('todoTask')
     taskElement.classList.remove('doingTask')
+    taskObjet.status = 'done'
     taskElement.style.display = 'none'
   })
 
   // doing task
 
+  // let taskObjet = {
+  //   name: task,
+  //   status: "to do",
+  // }
+
   buttonDoingTask.addEventListener('click', () => {
     taskElement.classList.add('doingTask')
     taskElement.classList.remove('doneTask')
     taskElement.classList.remove('todoTask')
+    taskObjet.status = 'doing'
     taskElement.style.display = 'none'
   })
 
@@ -171,7 +201,7 @@ form.addEventListener("submit", (e) => {
     if(buttonEditTask.innerText.toLowerCase() == 'edit'){
       buttonEditTask.innerText = "Save"
 			contentPara.removeAttribute("readonly")
-			buttonEditTask.focus()
+			contentPara.focus()
 
     }else{
       buttonEditTask.innerText = "Edit"
