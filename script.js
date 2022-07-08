@@ -32,9 +32,11 @@ form.addEventListener("submit", (e) => {
 
   let taskObjet = {
     name: task,
-    status: "To do",
+    status: "to do",
   }
   tasksTable.push(taskObjet)
+  console.log(taskObjet)
+  console.log(tasksTable)
 
   const taskElement = document.createElement('div')
   taskElement.classList.add('taskDiv', 'todoTask')
@@ -118,6 +120,9 @@ form.addEventListener("submit", (e) => {
   doingTaskImg.classList.add('fa', 'fa-arrow-down')
   doingTaskImg.setAttribute('id', 'priority')
 
+  const buttonEditTask = document.createElement('button')
+  buttonEditTask.innerHTML = 'Edit'
+
   const buttonDelete = document.createElement('button')
   const deleteTaskImg = document.createElement('i')
 
@@ -126,6 +131,7 @@ form.addEventListener("submit", (e) => {
   deleteTaskImg.setAttribute('id', 'deleteTaskImg')
 
   taskElement.appendChild(buttonDoingTask)
+  taskElement.appendChild(buttonEditTask)
   taskElement.appendChild(buttonDelete)
   tasksList.appendChild(taskElement)
 
@@ -135,12 +141,6 @@ form.addEventListener("submit", (e) => {
   //priority button toggle
   buttonPriority.addEventListener('click', () => {
     priorityDropdownContent.classList.toggle('priorityDropdownShow')
-  })
-
-
-  // delete a task
-  buttonDelete.addEventListener('click', () => {
-    tasksList.removeChild(taskElement)
   })
 
   // validate task
@@ -159,6 +159,22 @@ form.addEventListener("submit", (e) => {
     taskElement.classList.remove('doneTask')
     taskElement.classList.remove('todoTask')
     taskElement.style.display = 'none'
+  })
+
+  // Edit task
+
+  buttonEditTask.addEventListener('click', () => {
+    if(buttonEditTask.innerHTML.toLowerCase() == 'edit'){
+      
+    }else{
+      
+    }
+  })
+
+
+  // delete a task
+  buttonDelete.addEventListener('click', () => {
+    tasksList.removeChild(taskElement)
   })
 
 })
