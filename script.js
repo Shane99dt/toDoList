@@ -163,19 +163,16 @@ form.addEventListener("submit", (e) => {
 
  
   
-
-   
-
 })
 
   // show toDo tasks
-
 
   const showTodo = () => {
     const list = document.getElementsByClassName("todoTask")
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       // console.log(list[i])
+      document.getElementById("taskTitle").innerHTML = 'Task'
     }
   }
 
@@ -201,6 +198,7 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       console.log(list[i])
+      document.getElementById("taskTitle").innerHTML = 'Doing'
     }
   }
 
@@ -227,6 +225,7 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       console.log(list[i])
+      document.getElementById("taskTitle").innerHTML = 'Done'
     }
   }
 
@@ -253,6 +252,7 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       console.log(list[i])
+      document.getElementById("taskTitle").innerHTML = 'All'
     }
   }
 
@@ -262,14 +262,9 @@ form.addEventListener("submit", (e) => {
 
   // show all tasks end
 
-  // const makeRandomTask = () => {
-  //   const list = document.getElementById("randomTask")
-
-  // }
-
 
   // Random 
-  // generatedTask = [""];
+
   let index=0;
   let randomValue = ["", "Random task number one", "Random task Number two", "Random task number 3", "Random task number 4"]
 
@@ -277,7 +272,6 @@ form.addEventListener("submit", (e) => {
     randomInteger = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 }
   
-
   function makeRandomTask(){ 
     let generatedTask = (randomValue[randomInteger])
         console.log(generatedTask)
@@ -299,11 +293,10 @@ form.addEventListener("submit", (e) => {
   function addRandomTask(){
     randomNumber()
     makeRandomTask()
-    
   }
 
   randomTask.addEventListener('click', () => {
     addRandomTask()
    })
 
-   
+  // 
