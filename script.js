@@ -154,16 +154,26 @@ form.addEventListener("submit", (e) => {
 
   // show toDo tasks
 
+
   const showTodo = () => {
     const list = document.getElementsByClassName("todoTask")
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
-      console.log(list[i])
+      // console.log(list[i])
+    }
+  }
+
+  const hideTodoTasks = () => {
+    const list = document.getElementsByClassName("todoTask")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'none'
     }
   }
 
   toDoLabel.addEventListener('click', () => {
     showTodo()
+    hideCurrentTasks()
+    hideFinishedTasks()
   })
 
   // show toDo tasks end
@@ -178,8 +188,18 @@ form.addEventListener("submit", (e) => {
     }
   }
 
+  const hideCurrentTasks = () => {
+    const list = document.getElementsByClassName("doingTask")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'none'
+      console.log(list[i])
+    }
+  }
+
   doingLabel.addEventListener('click', () => {
     showCurrentTasks()
+    hideFinishedTasks()
+    hideTodoTasks()
   })
 
   // show current tasks end
@@ -194,8 +214,18 @@ form.addEventListener("submit", (e) => {
     }
   }
 
+  const hideFinishedTasks = () => {
+    const list = document.getElementsByClassName("doneTask")
+    for(let i = 0; i < list.length; i++){
+      list[i].style.display = 'none'
+      console.log(list[i])
+    }
+  }
+
   doneLabel.addEventListener('click', () => {
     showFinishedTasks()
+    hideTodoTasks()
+    hideCurrentTasks()
   })
 
   // show finished tasks end
