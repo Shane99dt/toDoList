@@ -179,7 +179,13 @@ form {
 
 /* end icons style*/
 
-.i button {
+.taskDiv button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.taskAddDiv button {
   border: none;
   background-color: transparent;
   cursor: pointer;

@@ -23,29 +23,11 @@ form.addEventListener("submit", (e) => {
 
   const task = input.value;
 
-  // if(!task){
-  //   alert("Please add a task")
-  //   return
-  // }
-
-//  // tasks.innerHTML += `
-//  // <div class="taskDiv" id="taskEl">
-//  //   <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
-//  //   <div class="taskContent">
-//  //     <input type = "text" value = "${task}" readonly>
-//  //   </div>
-//  //   <div class="iconsEnd">
-//  //     <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-//  //     <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
-//  //     <i id="deleteTask" class='fa-solid fa-trash-can'></i>
-//  //     <button id="editBtn">edittt</button>
-//  //   </div>
-//  // </div>
-//  // `
-
-
-
-
+  // prevents addding null tasks
+  if(!task){
+    alert("Please add a task")
+    return
+  }
 
   const taskElement = document.createElement('div')
   taskElement.classList.add('taskDiv', 'todoTask')
@@ -128,34 +110,6 @@ form.addEventListener("submit", (e) => {
   })
 
 })
-
-  // const todoDivs = document.getElementsByClassName("taskDiv")
-
-  // const showTodoTasks = () => {
-  //   // todoDivs.classList.add('qsdjkh')
-  //   console.log('somethibg')
-  //   console.log(todoDivs)
-  // }
-
-  // toDoLabel.addEventListener('click', showTodoTasks())
-
-  // toDoLabel.addEventListener('click', () => {
-  //   console.log(document.getElementsByClassName("todoTask"))
-  //   console.log("lksd")
-  // })
-
-  // doingLabel.addEventListener('click', () => {
-  //   console.log(document.getElementsByClassName("doingTask"))
-  //   console.log("lksdsqd q")
-  // })
-
-  // doneLabel.addEventListener('click', () => {
-  //   console.log(document.getElementsByClassName("doneTask"))
-  //   console.log("done task")
-  // })
-
-
-
 
   // show toDo tasks
 
