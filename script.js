@@ -127,6 +127,11 @@ form.addEventListener("submit", (e) => {
     taskElement.style.display = 'none'
   })
 
+ 
+  
+
+   
+
 })
 
   // const todoDivs = document.getElementsByClassName("taskDiv")
@@ -221,27 +226,30 @@ form.addEventListener("submit", (e) => {
 
   // show all tasks end
 
+  // const makeRandomTask = () => {
+  //   const list = document.getElementById("randomTask")
+
+  // }
+
 
   // Random 
-  function addRandomTask(){
-    randomNumber()
-    makeRandomTask()
-    
-  }
-
-  let randomValue = ["Random task number one", "Random task number two", "Random task Number 3"]
+  // generatedTask = [""];
+  let index=0;
+  let randomValue = ["", "Random task number one", "Random task Number two", "Random task number 3", "Random task number 4"]
 
   function randomNumber() {
-    randomInteger = Math.floor(Math.random() * (max - min + 1)) + min;
+    randomInteger = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
 }
+  
 
-  function makeRandomTask(){
-    let generatedTask= new task(randomValue[randomNumber]);
-        tasks.innerHTML += `   
+  function makeRandomTask(){ 
+    let generatedTask = (randomValue[randomInteger])
+        console.log(generatedTask)
+        tasks.innerHTML += `    
         <div class="taskDiv" id="taskEl">
         <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
         <div class="taskContent">
-          <input type = "text" value = "${generatedTask.value}" readonly>
+          <input type = "text" value = "${generatedTask}" readonly>
         </div>
         <div class="iconsEnd">
           <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
@@ -250,5 +258,16 @@ form.addEventListener("submit", (e) => {
           <button id="editBtn">edittt</button>
         </div>
       </div>
-      `
+      `}
+  
+  function addRandomTask(){
+    randomNumber()
+    makeRandomTask()
+    
   }
+
+  randomTask.addEventListener('click', () => {
+    addRandomTask()
+   })
+
+   
