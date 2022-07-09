@@ -1,3 +1,8 @@
+/* font */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
 main {
   display: flex;
   flex-direction: column;
@@ -59,7 +64,7 @@ aside article button {
 }
 
 #pageTitle {
-  font-family: cursive;
+  font-family: 'Caveat', cursive;
   position: relative;
   font-weight: 400;
   font-size: 50px;
@@ -124,7 +129,7 @@ aside article button {
 
 .tasks-list h2 {
   font-size: 35px;
-  font-family: cursive;
+  font-family: 'Caveat', cursive;
   margin-top: 20px;
 }
 
@@ -181,25 +186,11 @@ form {
 
 /* priority button */
 
-/* No need for the moment */
-
-/* .priority-dropdown-content{
-  display: none;
-  position: absolute;
+#selectPriority{
+  padding: 5px;
+  border: none;
   background-color: #f5f5f5;
-  z-index: 1;
 }
-
-.priority-dropdown-content a{
-  color: black;
-  text-decoration: none;
-  padding: 12px 16px;
-  display: block;
-}
-
-.priorityDropdownShow{
-  display: block;
-} */
 
 /* priority button end */
 
@@ -236,13 +227,6 @@ i {
   bottom: 80px;
   right: 80px;
 }
-
-
-
-
-
-
-
 
 .button-86 {
   all: unset;
