@@ -11,6 +11,7 @@ const toDoLabel = document.getElementById("todoLabel")
 const doingLabel = document.getElementById("doingLabel")
 const doneLabel = document.getElementById("doneLabel")
 const allLabel = document.getElementById("allLabel")
+const taskTitle = document.getElementById("taskTitle")
 let tasksTable = []
 
 // prevents refreshing the page while adding a task
@@ -79,6 +80,7 @@ form.addEventListener("submit", (e) => {
   taskElement.appendChild(buttonPriority)
 
   const selectList = document.createElement('select')
+  selectList.setAttribute('id', 'selectPriority')
   buttonPriority.appendChild(selectList)
 
   let arrayPriority = [0, 1, 2, 3, 4, 5]
@@ -224,7 +226,6 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       // console.log(list[i])
-      document.getElementById("taskTitle").innerHTML = 'Task'
     }
   }
 
@@ -239,6 +240,7 @@ form.addEventListener("submit", (e) => {
     showTodo()
     hideCurrentTasks()
     hideFinishedTasks()
+    taskTitle.innerHTML = "Tasks"
   })
 
   // show toDo tasks end
@@ -250,7 +252,6 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       console.log(list[i])
-      document.getElementById("taskTitle").innerHTML = 'Doing'
     }
   }
 
@@ -266,6 +267,7 @@ form.addEventListener("submit", (e) => {
     showCurrentTasks()
     hideFinishedTasks()
     hideTodoTasks()
+    taskTitle.innerHTML = "Doing"
   })
 
   // show current tasks end
@@ -277,7 +279,6 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       console.log(list[i])
-      document.getElementById("taskTitle").innerHTML = 'Done'
     }
   }
 
@@ -293,6 +294,7 @@ form.addEventListener("submit", (e) => {
     showFinishedTasks()
     hideTodoTasks()
     hideCurrentTasks()
+    taskTitle.innerHTML = "Finished"
   })
 
   // show finished tasks end
@@ -304,12 +306,12 @@ form.addEventListener("submit", (e) => {
     for(let i = 0; i < list.length; i++){
       list[i].style.display = 'flex'
       console.log(list[i])
-      document.getElementById("taskTitle").innerHTML = 'All'
     }
   }
 
   allLabel.addEventListener('click', () => {
     showAllTasks()
+    taskTitle.innerHTML = "All"
   })
 
   // show all tasks end
