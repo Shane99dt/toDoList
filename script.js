@@ -275,11 +275,26 @@ form.addEventListener("submit", (e) => {
 
   // show all tasks end
 
+  // how to use
+  const howToUseImg = document.getElementById('how-to')
+  const howToUseDiv = document.getElementById('howToDiv')
+
+  howToUseImg.addEventListener('click', () => {
+    console.log(howToUseDiv.style)
+    if(howToUseDiv.style.display === "none"){
+      howToUseDiv.style.display === "block"
+      console.log('click')
+    }else{
+      howToUseDiv.style.display === "none"
+      console.log('d click')
+    }
+  })
+
 
   // Random
 
   let index=0;
-  let randomValue = ["", "Random task number one", "Random task Number two", "Random task number 3", "Random task number 4"]
+  let randomValue = ["Go to shopping", "Wash the car", "Clean the house", "Finish the book", "Charge the mobile phone", "Get breakfast"]
 
   function randomNumber() {
     randomInteger = Math.floor(Math.random() * (3 - 1 + 1)) + 1;

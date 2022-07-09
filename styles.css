@@ -296,3 +296,20 @@ i {
   transition: 0s;
   transform: translate(0, 5%);
 }
+
+
+#how-to{
+  display: block;
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+}
+
+.how-to-use{
+  display: none;
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
