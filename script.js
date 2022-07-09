@@ -151,7 +151,6 @@ form.addEventListener("submit", (e) => {
   const buttonEditTask = document.createElement('button')
   buttonEditTask.innerText = "Edit"
 
-
   const buttonDelete = document.createElement('button')
   const deleteTaskImg = document.createElement('i')
 
@@ -183,11 +182,6 @@ form.addEventListener("submit", (e) => {
   })
 
   // doing task
-
-  // let taskObjet = {
-  //   name: task,
-  //   status: "to do",
-  // }
 
   buttonDoingTask.addEventListener('click', () => {
     taskElement.classList.add('doingTask')
@@ -317,7 +311,7 @@ form.addEventListener("submit", (e) => {
   // show all tasks end
 
 
-  // Random 
+  // Random
 
   let index=0;
   let randomValue = ["", "Random task number one", "Random task Number two", "Random task number 3", "Random task number 4"]
@@ -328,22 +322,37 @@ form.addEventListener("submit", (e) => {
   
   function makeRandomTask(){ 
     let generatedTask = (randomValue[randomInteger])
-        console.log(generatedTask)
-        tasks.innerHTML += `    
-        <div class="taskDiv" id="taskEl">
-        <i id="validate" class='fa fa-circle' style='color:#b5b5b5'></i>
+    console.log(generatedTask)
+    tasks.innerHTML +=
+    `
+    <div class="taskDiv todoTask">
+      <button>
+        <i class="fa fa-circle" id="validate"></i></button>
         <div class="taskContent">
-          <input type = "text" value = "${generatedTask}" readonly>
+          <input class="content" type="text"
+          value = "${generatedTask}"
+            readonly="readonly"/>
         </div>
-        <div class="iconsEnd">
-          <i id="priority" class='fa fa-star' style='color:#d35a78'></i>
-          <i id="sendToDoing" class='fa fa-arrow-down' style='color:#740707'></i>
-          <i id="deleteTask" class='fa-solid fa-trash-can'></i>
-          <button id="editBtn">edittt</button>
+        <div class="dropdown">
+          <select id="selectPriority">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-      </div>
-      `}
-  
+        <button>
+          <i class="fa fa-arrow-down" id="sendToDoing"></i>
+        </button>
+        <button>Edit</button>
+        <button>
+          <i class="fa-solid fa-trash-can" id="deleteTaskImg"></i>
+      </button>
+    </div>`
+  }
+
   function addRandomTask(){
     randomNumber()
     makeRandomTask()
@@ -353,4 +362,4 @@ form.addEventListener("submit", (e) => {
     addRandomTask()
    })
 
-  // 
+  //
