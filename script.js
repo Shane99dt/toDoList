@@ -13,6 +13,7 @@ const doneLabel = document.getElementById("doneLabel")
 const allLabel = document.getElementById("allLabel")
 const taskTitle = document.getElementById("taskTitle")
 let tasksTable = []
+let taskObjet
 
 // prevents refreshing the page while adding a task
 
@@ -41,7 +42,7 @@ form.addEventListener("submit", (e) => {
     return
   }
 
-  let taskObjet = {
+  taskObjet = {
     name: task,
     status: "to do",
   }
@@ -302,7 +303,12 @@ form.addEventListener("submit", (e) => {
 
   function makeRandomTask(){
     let generatedTask = (randomValue[randomInteger])
-    console.log(generatedTask)
+    taskObjet = {
+      name: generatedTask,
+      status: "to do",
+    }
+    tasksTable.push(taskObjet)
+
     tasks.innerHTML +=
     `
     <div class="taskDiv todoTask" id="rdivTask">
@@ -334,6 +340,7 @@ form.addEventListener("submit", (e) => {
 
     // had to add this in this way because have no time left ;-(
     // added an 'r' to every id or class I added now in this html here to represent random
+    // c dégueulasse, je sais mais j'ai pas de choix
 
     const buttonValidate = document.getElementById("rbtnValidate")
     const validateImg = document.getElementById("validate")
@@ -392,5 +399,5 @@ form.addEventListener("submit", (e) => {
 
   randomTask.addEventListener('click', () => {
     addRandomTask()
+    console.log(tasksTable)
   })
-
