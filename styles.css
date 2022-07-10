@@ -35,7 +35,7 @@ aside article button {
 }
 
 #todoLabel {
-  background-color: #D9D9D9;
+  background-color: #2e83e3;
 }
 
 #doingLabel {
@@ -65,7 +65,7 @@ aside article button {
 
 #pageTitle {
   font-family: 'Caveat', cursive;
-  position: relative;
+  position: absolute;
   font-weight: 400;
   font-size: 50px;
   color: #000000;
@@ -228,15 +228,6 @@ i {
   padding: 9px;
 }
 
-.taskButtons {
-  display: flex;
-  position: fixed;
-  justify-content: end;
-  align-items: end;
-  bottom: 80px;
-  right: 80px;
-}
-
 .button-86 {
   all: unset;
   width: 120px;
@@ -348,8 +339,64 @@ i {
   #pageTitle {
     margin-left: 80px;
   }
+
+  #how-to{
+    width: 40px;
+  }
 }
 
 @media screen and (max-width:414px) {
  
+}
+
+
+@media screen and (max-width:426px) {
+
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #page6itle{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  aside{
+    padding-top: 100px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    position: unset;
+  }
+
+  .button-86{
+    height: 20px;
+    width: 40px;
+  }
+
+  #howToDiv img{
+    height: 250px;
+  }
+
+  #how-to{
+    width: 30px;
+  }
+
+ .sec-form{
+  position: unset;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 20px;
+
+
+ }
+
 }
