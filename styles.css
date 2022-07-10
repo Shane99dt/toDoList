@@ -303,6 +303,7 @@ i {
   position: fixed;
   right: 50px;
   bottom: 100px;
+  cursor: pointer;
 }
 
 .how-to-use{

@@ -282,10 +282,10 @@ form.addEventListener("submit", (e) => {
   howToUseImg.addEventListener('click', () => {
     console.log(howToUseDiv.style)
     if(howToUseDiv.style.display === "none"){
-      howToUseDiv.style.display === "block"
+      howToUseDiv.style.display = "block"
       console.log('click')
     }else{
-      howToUseDiv.style.display === "none"
+      howToUseDiv.style.display = "none"
       console.log('d click')
     }
   })
