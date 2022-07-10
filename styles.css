@@ -224,7 +224,7 @@ form input{
   padding: 10px;
 }
 
-i {
+i{
   padding: 9px;
 }
 
@@ -345,10 +345,6 @@ i {
   }
 }
 
-@media screen and (max-width:414px) {
- 
-}
-
 
 @media screen and (max-width:426px) {
 
@@ -389,14 +385,16 @@ i {
     width: 30px;
   }
 
- .sec-form{
-  position: unset;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0 20px;
+  .sec-form{
+    position: unset;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 20px;
+  }
 
-
- }
+  form input{
+    flex-grow: 1;
+  }
 
 }
