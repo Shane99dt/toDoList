@@ -299,17 +299,17 @@ form.addEventListener("submit", (e) => {
   function randomNumber() {
     randomInteger = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
   }
-  
-  function makeRandomTask(){ 
+
+  function makeRandomTask(){
     let generatedTask = (randomValue[randomInteger])
     console.log(generatedTask)
     tasks.innerHTML +=
     `
-    <div class="taskDiv todoTask">
-      <button>
+    <div class="taskDiv todoTask" id="rdivTask">
+      <button id="rbtnValidate">
         <i class="fa fa-circle" id="validate"></i></button>
         <div class="taskContent">
-          <input class="content" type="text"
+          <input class="content" id="rInput" type="text"
           value = "${generatedTask}"
             readonly="readonly"/>
         </div>
@@ -323,14 +323,66 @@ form.addEventListener("submit", (e) => {
             <option value="5">5</option>
           </select>
         </div>
-        <button>
+        <button id="rDoingBtn">
           <i class="fa fa-arrow-down" id="sendToDoing"></i>
         </button>
-        <button>Edit</button>
-        <button>
+        <button id="rEditBtn">Edit</button>
+        <button id="rBtnDelete">
           <i class="fa-solid fa-trash-can" id="deleteTaskImg"></i>
       </button>
     </div>`
+
+    // had to add this in this way because have no time left ;-(
+    // added an 'r' to every id or class I added now in this html here to represent random
+
+    const buttonValidate = document.getElementById("rbtnValidate")
+    const validateImg = document.getElementById("validate")
+    const divTask = document.getElementById('rdivTask')
+    buttonValidate.addEventListener('click', () => {
+      divTask.classList.add('doneTask')
+      validateImg.style.color = '#60CA1F'
+      divTask.classList.remove('todoTask')
+      divTask.classList.remove('doingTask')
+      divTask.style.display = 'none'
+    })
+
+    // button doing
+
+    const buttonDoing = document.getElementById("rDoingBtn")
+
+    buttonDoing.addEventListener('click', () => {
+      divTask.classList.add('doingTask')
+      validateImg.style.color = '#D74747'
+      divTask.classList.remove('doneTask')
+      divTask.classList.remove('todoTask')
+      divTask.style.display = 'none'
+    })
+
+    // edit button
+
+    const buttonEdit = document.getElementById("rEditBtn")
+    const randInput = document.getElementById("rInput")
+
+    buttonEdit.addEventListener('click', (e) => {
+      if(buttonEdit.innerText.toLowerCase() == 'edit'){
+        buttonEdit.innerText = "Save"
+        randInput.removeAttribute("readonly")
+        randInput.focus()
+
+      }else{
+        buttonEdit.innerText = "Edit"
+        randInput.setAttribute("readonly", "readonly")
+      }
+    })
+
+    //  delete
+
+    const btnDelete = document.getElementById("rBtnDelete")
+
+    btnDelete.addEventListener('click', () => {
+      tasks.removeChild(divTask)
+    })
+
   }
 
   function addRandomTask(){
@@ -340,6 +392,5 @@ form.addEventListener("submit", (e) => {
 
   randomTask.addEventListener('click', () => {
     addRandomTask()
-   })
+  })
 
-  //
