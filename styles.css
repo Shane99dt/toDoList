@@ -172,7 +172,7 @@ textarea:focus, input:focus {
 
 /* add padding left when remove the valid button */
 form {
-  width: 100%;
+  width: 580px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -312,4 +312,34 @@ i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+@media screen and (max-width: 768px) {
+  .sec-form {
+    display: flex;
+    justify-content: center;
+    margin-left: 220px;
+  }
+  .taskCreator {
+    display: block;
+    margin-left: 0;
+  }
+
+  .taskAddDiv {
+      width: 125%;
+    /* width: calc(100% + +115px) */
+  }
+
+  .taskDiv {
+    width: 100%;
+  }
+
+  #pageTitle {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width:414px) {
+ 
 }
